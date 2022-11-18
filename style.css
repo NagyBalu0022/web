@@ -6,11 +6,11 @@
     background-color: #333;
   }
   
-  li {
+ .menu li {
     float: left;
   }
   
-  li a {
+.menu li a {
     display: block;
     color: white;
     text-align: center;
@@ -18,10 +18,10 @@
     text-decoration: none;
   }
   
-  li a:hover:not(.active) {
+.menu li a:hover:not(.active) {
     background-color: #111;
   }
   
-  .active {
+.active {
     background-color: #04AA6D;
   }
