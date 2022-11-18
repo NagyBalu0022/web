@@ -29,10 +29,14 @@
     <fieldset>
         <legend>Milyen színű autót szeretnél kölcsönözni?</legend>
         <input type="radio" name="szin" id="szin"> Fekete
-        <input type="radio" name="szin" id="szin"> Fehér
+        <input type="radio" name="szin" id="szin" value="default"> Fehér
         <input type="radio" name="szin" id="szin"> Piros
         <input type="radio" name="szin" id="szin"> kék
     </fieldset>
+    <br>
+    <legend>Mennyire legyen gyors az autó?</legend>
+    <input type="range" name="gyors" id="gyors">
+    <br>
     <input type="reset" value="TÖRLÉS">
     <input type="submit" value="BEKÜLDÉS!">
 </form>
