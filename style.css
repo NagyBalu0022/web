@@ -34,6 +34,7 @@ body{
     transition: 0.5s;
     float: left;
     margin: 1%;
+    text-align: center;
 }
 
 .evszakok:hover{
