@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosár</title>
+
+    <style>
+        button {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+
+<body onload="aktualis_ar()", kosar_frissit()>
+
+    <button type="button" onclick="kosarba('alma' ,1)">alma
+        <p id="alma">Ár</p>
+    </button>
+
+    <button type="button" onclick="kosarba('korte' ,2)">korte
+        <p id="korte">Ár</p>
+    </button>
+
+    <button type="button" onclick="kosarba('valami' ,3)">valami
+        <p id="valami">Ár</p>
+    </button>
+
+    <br>
+    <hr>
+        <h2>kosár:</h2>
+        <table border="1" id="kosar"></table>
+            <caption>kosár</caption>
+    </hr>
+
+
+
+    <script>
+        const alma_ar = 1500;
+        const korte_ar = 2000;
+        const valami_ar = 330;
+        function aktualis_ar() {
+            document.getElementById('alma').innerHTML = alma_ar + "Ft";
+            document.getElementById('korte').innerHTML = korte_ar + "Ft";
+            document.getElementById('valami').innerHTML = valami_ar + "Ft";
+        }
+            function kosarba(termek, darab) {
+                localStorage.setItem(termek, darab);
+            }
+
+            function kosar_frissit(){
+                let tablazat=" <tr><th>termk</th><th>darab</th><th>ár</th></tr><tr><th>alma</th><th>2</th><th>3500 Ft</th></tr><tr><th>korte</th><th>2</th><th>2000 Ft</th> </tr> <tr><th>valami</th><th>2</th><th>330 Ft</th></tr>";
+
+                document.getElementById('kosar').innerHTML=tablazat;
+            }
+
+    </script>
+
+</body>
+</html>
